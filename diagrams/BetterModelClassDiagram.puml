@@ -12,6 +12,10 @@ Class Person {
     +isStarred : Boolean
 }
 
+Class Person {
+    -isArchived : Boolean
+    }
+
 AddressBook *-right-> "1" UniquePersonList
 AddressBook *-right-> "1" UniqueTagList
 UniqueTagList -[hidden]down- UniquePersonList
@@ -26,5 +30,7 @@ Person *--> Name
 Person *--> Phone
 Person *--> Email
 Person *--> Address
+Person *--> "*" MeetingNote
+Person *--> InsurancePolicy
 Person -right> "*" Reminder
 @enduml

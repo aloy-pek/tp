@@ -18,6 +18,7 @@ Class UserPrefs
 
 Class UniquePersonList
 Class Person {
+    -isArchived : Boolean
     +isStarred : Boolean
 }
 Class Address
@@ -25,6 +26,8 @@ Class Email
 Class Name
 Class Phone
 Class Tag
+Class MeetingNote
+Class InsurancePolicy
 Class Reminder
 
 Class I #FFFFFF
@@ -49,6 +52,8 @@ Person *--> Phone
 Person *--> Email
 Person *--> Address
 Person *--> "*" Tag
+Person *--> "*" MeetingNote
+Person *--> InsurancePolicy
 Person *--> "*" Reminder
 
 Person -[hidden]up--> I
